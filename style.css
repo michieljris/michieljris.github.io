@@ -1,7 +1,11 @@
 :root{
-    --themecol1med: rgb(196, 118, 255);
-    --themecol1dark: purple;
-    --themecol2light: aliceblue;
+    --themecol1med: rgb(75, 106, 165);
+    --themecol1dark: rgb(55, 77, 121);
+    --themecol2light: rgb(241, 244, 249);
+    --themecol3med: var(--themecol1med);
+    --themecol3dark: var(--themecol1dark);
+    --headertype: 'Alegreya Sans SC';
+    --bodytype: 'Alegreya Sans';
 }
 
 img {
@@ -22,7 +26,7 @@ img {
 }
 
 body {
-    font-family: 'Georgia';
+    font-family: var(--bodytype);
     display: flex;
     justify-content: center;
     background-color: var(--themecol1med);
@@ -43,7 +47,7 @@ p, li {
 }
 
 h1, h2, h3 {
-    font-family: 'Outfit';
+    font-family: var(--headertype);
 }
 
 a:not(.link) {
@@ -56,19 +60,22 @@ a:hover {
 }
 
 a.link {
-    /* float: right; */
+    float: none;
     clear: right;
-    background-color: var(--themecol1med);
+    background-color: var(--themecol3med);
     color: var(--themecol2light);
     padding: 10px;
+    margin-left: 0px;
     border-radius: 5px;
     /* margin-top: 10px; */
     text-decoration: none;
-    font-family: 'Outfit';
+    font-family: var(--headertype);
+    display: block;
+    margin-bottom: 5px;
 }
 
 a.link:hover{
-    background-color:var(--themecol1dark);
+    background-color:var(--themecol3dark);
 }
 
 #ftpic {
